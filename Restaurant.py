@@ -87,7 +87,7 @@ class Restaurant :
   
   def write_to_file (self):
     headers = ["restaurant_id","restaurant_name","address_details","cuisine_details","closing_time","rating","signup_date","owner_name"]
-    with open(f"customer-{timestamp}.csv", "w", newline="") as file :
+    with open(f"restaurants-{timestamp}.csv", "w", newline="") as file :
        writer = csv.writer(file)
        writer.writerow(headers)
        writer.writerow([self.restaurant_id,self.restaurant_name,self.address_details,self.cuisine_details,self.closing_time,self.rating,self.signup_date,self.owner_name])
